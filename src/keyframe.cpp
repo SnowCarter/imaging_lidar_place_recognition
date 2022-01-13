@@ -79,10 +79,10 @@ void pubMatchedImages(const ros::Publisher* this_pub,
     // cv::Scalar text_color = cv::Scalar(255,0,255);
     // cv::putText(color_img, "Frame: " + to_string(index_new), 
     //             cv::Point2f(5, text_height_pos),
-    //             CV_FONT_HERSHEY_SIMPLEX,  text_scale, text_color, text_thickness);
+    //             cv::FONT_HERSHEY_SIMPLEX,  text_scale, text_color, text_thickness);
     // cv::putText(color_img, "Frame: " + to_string(index_old),
     //             cv::Point2f(5, text_height_pos + image_new.size().height + gap),
-    //             CV_FONT_HERSHEY_SIMPLEX,  text_scale, text_color, text_thickness);
+    //             cv::FONT_HERSHEY_SIMPLEX,  text_scale, text_color, text_thickness);
     // publish matched image
     sensor_msgs::ImagePtr msg = cv_bridge::CvImage(std_msgs::Header(), "bgr8", color_img).toImageMsg();
     msg->header.stamp = ros::Time(time_stamp);
